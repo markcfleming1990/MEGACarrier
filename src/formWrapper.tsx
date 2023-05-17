@@ -1,9 +1,10 @@
-import { ReactNode } from "react"
+import { ReactNode } from "react";
+// import Styles from "./index.css"
 
 type FormWrapperProps = {
-  title: string
-  children: ReactNode
-}
+  title: string;
+  children: ReactNode;
+};
 
 export function FormWrapper({ title, children }: FormWrapperProps) {
   return (
@@ -22,5 +23,5 @@ export function FormWrapper({ title, children }: FormWrapperProps) {
         {children}
       </div>
     </>
-  )
+  );
 }

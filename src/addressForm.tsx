@@ -5,7 +5,7 @@ export function AddressForm() {
     <FormWrapper title="Carrier Terms">
      <section>
       <h1>CARRIER REPRESENTS AND WARRANTS THAT IT: </h1>
-      <p>
+      <p className="font-bold">
       A. Is a Registered Motor Carrier of Property authorized to provide transportation of property under contracts with
 shippers and receivers and/or brokers of general commodities.
 B. Shall transport the property, under its own operating authority and subject to the terms of this Agreement;
