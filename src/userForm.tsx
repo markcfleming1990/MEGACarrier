@@ -2,6 +2,7 @@ import { FormWrapper } from "./formWrapper"
 
 type UserData = {
   carrierName: string
+  // authorizedSign: string
   carrierAddress: string
   mcnumber: string
   dotnumber: string
@@ -15,6 +16,7 @@ type UserFormProps = UserData & {
 
 export function UserForm({
   carrierName,
+  // authorizedSign,
   carrierAddress,
   mcnumber,
   dotnumber,
@@ -33,6 +35,7 @@ export function UserForm({
         value={carrierName}
         onChange={e => updateFields({ carrierName: e.target.value })}
       />
+    
       <label>Carrier Address</label>
       <input
         required

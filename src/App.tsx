@@ -7,6 +7,7 @@ import emailjs from "@emailjs/browser";
 
 type FormData = {
   carrierName: string;
+  authorizedSign: string;
   carrierAddress: string;
   mcnumber: string;
   dotnumber: string;
@@ -17,6 +18,7 @@ type FormData = {
 
 const INITIAL_DATA: FormData = {
   carrierName: "",
+  authorizedSign: "",
   carrierAddress: "",
   mcnumber: "",
   dotnumber: "",
@@ -56,7 +58,8 @@ function App() {
           console.log(
             "Email sent successfully!",
             response.status,
-            response.text
+            response.text,
+            console.log(form)
           );
           // setTemplateParams(INITIAL_DATA);
         })

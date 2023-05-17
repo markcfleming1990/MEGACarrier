@@ -4,6 +4,7 @@ import { FormEvent } from "react";
 
 type CarrierData = {
   carrierName: string;
+  authorizedSign: string;
   carrierAddress: string;
   mcnumber: string;
   dotnumber: string;
@@ -18,12 +19,12 @@ type CarrierTermsProps = CarrierData & {
 
 export function CarrierTerms({
   carrierName,
+  authorizedSign,
   carrierAddress,
   mcnumber,
   dotnumber,
   updateFields,
   formRef,
-  onSubmit,
 }: CarrierTermsProps) {
   var currentDate = new Date().toLocaleDateString("en-US");
 
@@ -47,12 +48,28 @@ export function CarrierTerms({
         </p>
         <label>Carrier Name</label>
         <input
-          autoFocus
           required
           type="text"
           name="carrierName"
           value={carrierName}
           onChange={(e) => updateFields({ carrierName: e.target.value })}
+        />
+        <label>Carrier Address</label>
+        <input
+          required
+          type="text"
+          name="carrierAddress"
+          value={carrierAddress}
+          onChange={(e) => updateFields({ carrierAddress: e.target.value })}
+        />
+        <label>Authorized Signor</label>
+        <input
+          autoFocus
+          required
+          type="text"
+          name="authorizedSign"
+          value={authorizedSign}
+          onChange={(e) => updateFields({ authorizedSign: e.target.value })}
         />
         <label>MC Number</label>
         <input
@@ -83,9 +100,9 @@ export function CarrierTerms({
          type="checkbox"
          value={!checked}
          onChange={(e) => updateFields({ checked: setChecked(!checked) })} /> */}
-        <button type="submit" onClick={onSubmit}>
+        {/* <button type="submit" onClick={onSubmit}>
           Submit
-        </button>
+        </button> */}
       </form>
     </FormWrapper>
   );
