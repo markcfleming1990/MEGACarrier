@@ -23,7 +23,7 @@ export function UserForm({
   updateFields,
 }: UserFormProps) {
   return (
-    <FormWrapper title="User Details">
+    <FormWrapper title="Carrier Information">
       <form>
       <label>Carrier Name</label>
       <input
