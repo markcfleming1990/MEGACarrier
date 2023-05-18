@@ -1,8 +1,9 @@
 import { FormEvent, useState, useRef } from "react";
 import { CarrierTerms } from "./carrierTerms";
-import { AddressForm } from "./addressForm";
+import { CarrierAgreement } from "./carrierAgreement";
 import { UseMultiStepForm } from "./useMultiStepForm";
 import { UserForm } from "./userForm";
+import { StartPage } from "./StartPage";
 import emailjs from "@emailjs/browser";
 
 type FormData = {
@@ -59,7 +60,7 @@ function App() {
             "Email sent successfully!",
             response.status,
             response.text,
-            console.log(form)
+            console.log(FormData)
           );
           // setTemplateParams(INITIAL_DATA);
         })
@@ -78,9 +79,10 @@ function App() {
     previousStep,
     nextStep,
   } = UseMultiStepForm([
+    <StartPage />,
     <UserForm {...data} updateFields={updateFields} />,
-    <AddressForm />,
-    <CarrierTerms
+    <CarrierTerms />,
+    <CarrierAgreement
       {...data}
       updateFields={updateFields}
       formRef={formRef}
